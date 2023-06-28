@@ -1,3 +1,4 @@
+#Daire Carroll, Gothenburg University, 2023, carrolldaire@gmail.com
 #3: Approaching a population level assessment of body size in pinnipeds using drones, an early warning of environmental degradation.
 #Process and calibrate summarized harbor seal measurements
 
