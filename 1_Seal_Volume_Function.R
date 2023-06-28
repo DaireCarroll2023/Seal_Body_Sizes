@@ -1,4 +1,5 @@
-#########################################
+#3: Approaching a population level assessment of body size in pinnipeds using drones, an early warning of environmental degradation.
+#Automatically estimate length, width, elipsoid volume and complex volume for spatial polygons representing the outlines of harbour seals.
 
 if(!require("sf")){
   install.packages("sf",dependencies = TRUE)
