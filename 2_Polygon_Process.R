@@ -1,4 +1,4 @@
-#Daire Carroll, Gothenburg University, 2023
+#Daire Carroll, Gothenburg University, 2023, carrolldaire@gmail.com
 #2: Approaching a population level assessment of body size in pinnipeds using drones, an early warning of environmental degradation.
 #a pipeline based on the curved_length_vol function (1_Seal_Volume_Function.R) to process a folder full of shape file subfolders
 
