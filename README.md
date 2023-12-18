@@ -5,8 +5,6 @@ Data and R sctipts for measuring harbour seal body sizes and estimating mass bas
 2_Polygon_Process.R: This script uses the curved_length_vol function (1_Seal_Volume_Function.R) to process a folder full of .shp file subfolders containing georeferenced polygons representing individual outlines and outputs a .csv with estimates of length, width, and ellipsoid volume for each individual.
 3_Calibration.R: This script processes and calibrates summarized harbor seal measurements based on reference to known individuals
 
-Shp_Files.zip: Folder containing .shp file subfolders containing georeferenced polygons representing individual outlines of harbour seals for 2022 and 2021. 2021 data is published in Infantes et al. 2022 (https://doi.org/10.3389/fevo.2022.905309).
-
 CSV_Files: Folder containing data files
 
   Known_Seals.csv: True measurments of length and mass for known seals with derived estimates of 'true' width and volume. Drone based estimates of length, width, simple and   complex volume for the same individuals, information on pose.
