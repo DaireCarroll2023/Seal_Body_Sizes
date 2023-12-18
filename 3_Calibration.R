@@ -29,7 +29,7 @@ cleanup_text = theme(axis.text.x = element_text(color = "black", size = 12, angl
 
 #summer growth: data based on Harding et al. 2005, the daily increase in pup mass
 
-my.dir = paste("C:/Users/daire/Desktop/mosaics/Excel Data")
+my.dir = paste("  ")
 setwd(my.dir)
 
 my.data = read.csv("Pup_growth.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
@@ -197,9 +197,6 @@ write.csv(my.data,"measurments_mass_index.csv")
 #################################################################
 
 #regression of known mass against known ellipsoid volume
-
-my.dir = paste("C:/Users/daire/Desktop/mosaics/Excel Data") #here paste your file location eg: ~/Desktop/Drones/All_Shape_files
-setwd(my.dir)
 
 my.data = read.csv("Summarised_Weights.csv", sep = ",", header = TRUE)
 my.data = my.data[which(my.data$Location != "Slottskogen"),]
