@@ -177,7 +177,7 @@ ggplot(my.data, aes(x = Model_Vol, y = True_Vol)) +
 
 write.csv(my.data, "Known_Seals_Mass_Index.csv")
 
-my.data = read.csv("measurments.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
+my.data = read.csv("Measurments.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
 attach(my.data)
 head(my.data)
 
@@ -192,7 +192,7 @@ if(trans3 == TRUE){
 
 my.data = data.frame(my.data,Modle_L,Modle_W,Model_Vol)
 
-write.csv(my.data,"measurments_mass_index.csv")
+write.csv(my.data,"Measurments_Mass_Index.csv")
 
 #################################################################
 
@@ -264,7 +264,7 @@ if(spl1 == 2){
 
 #Now mass is estimated for all seals
 
-my.data2 = read.csv("measurments_mass_index.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
+my.data2 = read.csv("Measurments_Mass_Index.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
 attach(my.data2)
 head(my.data2)
 
@@ -347,7 +347,7 @@ if(trans2 == TRUE){
 }
 
 write.csv(my.data3,"Known_Seals_Mass_Index.csv")
-write.csv(my.data2,"measurments_mass_index.csv")
+write.csv(my.data2,"Measurments_Mass_Index.csv")
 write.csv(my.data,"Summarised_Weights_mass_index.csv")
 
 #################################################################
@@ -425,7 +425,7 @@ ggplot(data.frame(cbind(my.data,pred_front,pred_side)), aes(x = Mass_Index.kg., 
 
 #Now pups are 'aged' to estimated october 1st mass and survival is estimated
 
-my.data = read.csv("measurments_mass_index.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
+my.data = read.csv("Measurments_Mass_Index.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
 attach(my.data)
 head(my.data)
 
@@ -475,7 +475,7 @@ ggplot(my.data, aes(x=as.factor(Yr_M), y=Modle_L, color = as.factor(Year))) +
   labs(color='Year') +
   theme(legend.position = "none") 
 
-write.csv(my.data,"measurments_mass_index.csv")
+write.csv(my.data,"Measurments_Mass_Index.csv")
 
 mean(my.data$Mass_Index.kg.[which(my.data$Yr_M == "June 22" & my.data$Group == "Adult")])
 sd(my.data$Mass_Index.kg.[which(my.data$Yr_M == "June 22" & my.data$Group == "Adult")])
@@ -498,7 +498,7 @@ mean(my.data$Mass_Index.kg.[which(my.data$Yr_M == "Sept 2022")])
 
 #Summarise mass and lengths between seasons
 
-my.data = read.csv("measurments_mass_index.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
+my.data = read.csv("Measurments_Mass_Index.csv", sep = ",", header = TRUE, fileEncoding = 'UTF-8-BOM')
 attach(my.data)
 sept_d_15 = my.data[my.data$Month == 9 & my.data$Group == "Pup"  & is.na(my.data$Date) != TRUE ,]
 sept_d_15$Year = as.factor(sept_d_15$Year)
