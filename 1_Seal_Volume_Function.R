@@ -1,5 +1,5 @@
 #Daire Carroll, Gothenburg University, 2023, carrolldaire@gmail.com
-#3: Approaching a population level assessment of body size in pinnipeds using drones, an early warning of environmental degradation.
+#1: Approaching a population level assessment of body size in pinnipeds using drones, an early warning of environmental degradation.
 #Automatically estimate length, width, elipsoid volume and complex volume for spatial polygons representing the outlines of harbour seals.
 
 if(!require("sf")){
@@ -192,7 +192,7 @@ curved_length_vol = function(p,plt){
         repp1 = cbind(rev(st_coordinates(parts[shortsection,])[,1]),rev(st_coordinates(parts[shortsection,])[,2]))
         hs = st_zm(st_multipoint(rbind(repp2,repp1)))
       }
-      if(st_coordinates(hs)[1,1:2] != st_coordinates(hl)[1,1:2]){
+      if(identical(st_coordinates(hs)[1,1:2] , st_coordinates(hl)[1,1:2]) == FALSE) {
         XY = cbind(rev(st_coordinates(hs)[,1]),rev(st_coordinates(hs)[,2]))
         hs = st_multipoint(x = XY, dim = "XY")
       }
@@ -204,12 +204,12 @@ curved_length_vol = function(p,plt){
     hs = st_zm(st_multipoint(st_coordinates(parts[1,])))
     hl = st_zm(st_multipoint(st_coordinates(parts[2,]))) #perhaps we dont need to worry about the h1 h2 ordering HERE
     
-    if(st_coordinates(hs)[1,1:2] != st_coordinates(hl)[1,1:2]){
+    if(identical(st_coordinates(hs)[1,1:2] , st_coordinates(hl)[1,1:2]) == FALSE){
       XY = cbind(rev(st_coordinates(hs)[,1]),rev(st_coordinates(hs)[,2]))
       hs = st_multipoint(x = XY, dim = "XY")
     }
     
-  } 
+  }  
   
   h1_l = length(st_coordinates(hs)[,1])
   h2_l = length(st_coordinates(hl)[,1])
