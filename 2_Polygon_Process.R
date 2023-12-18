@@ -4,7 +4,7 @@
 
 ########################################
 
-my.dir = paste("C:/Users/daire/Desktop/mosaics/Shp_Files - Copy") #here paste your file location eg: ~/Desktop/Drones/All_Shape_files
+my.dir = paste(" ") #here paste your file location eg: ~/Desktop/Drones/All_Shape_files
 
 setwd(my.dir)
 files = dir()
