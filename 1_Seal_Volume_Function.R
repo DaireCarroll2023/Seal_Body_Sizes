@@ -278,7 +278,7 @@ curved_length_vol = function(p,plt){
   spine_perimiter2 = st_distance(hl,st_as_sf(spine_pts))#, by_element = TRUE)
   
   ws = spine_perimiter1 + spine_perimiter2
-  width = max(spine_perimiter1) + max(spine_perimiter2)
+  width = max(ws) #there was an error here "max(spine_perimiter1) + max(spine_perimiter2)" in Carroll et al 2024 which could lead to over estimation of width at high seg_no
   
   segs = c(buff,rep(0,seg_no),buff)
   for(i in 1:length(st_geometry(spine_pts))-1){
